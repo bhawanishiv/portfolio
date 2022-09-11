@@ -1,0 +1,15 @@
+.app-avatar {
+  border-radius: 50%;
+  &.md {
+    width: 15rem;
+    height: 15rem;
+  }
+  &.sm {
+    width: 10rem;
+    height: 10rem;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}

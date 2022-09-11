@@ -1,0 +1,14 @@
+.app-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &.active {
+    .icon__primary {
+      fill: currentColor;
+    }
+
+    .icon__primary-stroke {
+      stroke: currentColor;
+    }
+  }
+}

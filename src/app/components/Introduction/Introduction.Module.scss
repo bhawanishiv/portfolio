@@ -1,0 +1,23 @@
+.app-introduction {
+  &__title {
+    color: var(--app-sys-color-primary);
+    font-size: 1rem;
+    font-weight: 400;
+
+    &-main {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  }
+  &__description {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  &__role {
+    &-container {
+      padding: 2rem 0;
+      max-width: 32rem;
+    }
+  }
+}

@@ -9,6 +9,7 @@
     }
   },
   "rules": {
-    "react/jsx-filename-extension": [1, { "allow": "as-needed" }]
+    "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
+    "no-restricted-exports": 0
   }
 }
