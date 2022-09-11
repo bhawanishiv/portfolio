@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Introduction.Module.scss';
-
 const Introduction = (props) => {
   const { user } = props;
 

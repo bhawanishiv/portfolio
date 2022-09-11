@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+
+import scrollama from 'scrollama';
 
 import Header from 'app/components/Header';
 import Introduction from 'app/components/Introduction';
@@ -71,7 +73,7 @@ const projects = [
 
 const App = () => {
   const refs = useRef([]);
-
+  const scroller = scrollama();
   const renderApp = () => (
     <div>
       <div
@@ -123,6 +125,22 @@ const App = () => {
       </main>
     </div>
   );
+
+  useEffect(() => {
+    // setup the instance, pass callback functions
+    scroller
+      .setup({
+        step: refs.current,
+      })
+      .onStepEnter((response) => {
+        // { element, index, direction }
+        console.log(`response1->`, response);
+      })
+      .onStepExit((response) => {
+        // { element, index, direction }
+        console.log(`response2->`, response);
+      });
+  }, []);
 
   return renderApp();
 };

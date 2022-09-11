@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './MyProject.Module.scss';
-
 const MyProject = (props) => {
   const { title, category, imageUrl, previewUrl, description, tags, links } =
     props;

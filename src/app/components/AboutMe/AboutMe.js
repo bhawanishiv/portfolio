@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './AboutMe.Module.scss';
-
 const AboutMe = (props) => {
   const { user } = props;
 
@@ -28,7 +26,7 @@ const AboutMe = (props) => {
         </p>
 
         <p className="app-about__description">
-          Following are tools/rechnologies I am mostly working with:
+          Following are tools/technologies I mostly work with:
         </p>
         <ul className="app-about__technologies-list">
           {[

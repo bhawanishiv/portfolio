@@ -1,12 +1,19 @@
 .app-about {
   &__container {
-    padding: 5rem 0;
-    justify-content: center;
-    display: flex;
+    padding: 2rem 0;
+
+    @include for-xl-up {
+      padding: 5rem 0;
+
+      justify-content: center;
+      display: flex;
+    }
     gap: 4rem;
   }
   &__info {
-    max-width: 32rem;
+    @include for-xl-up {
+      max-width: 32rem;
+    }
   }
 
   &__description {
