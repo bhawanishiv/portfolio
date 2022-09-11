@@ -73,7 +73,7 @@ const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
           </a>
           <div className="ml-auto">
             <nav>
-              <ul className="flex items-center gap-6">
+              <ul className="flex items-center gap-4">
                 <li>
                   <button
                     type="button"
@@ -83,13 +83,21 @@ const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
                     {themeIcon}
                   </button>
                 </li>
-                {links.map((link) => (
-                  <li key={link.id}>
-                    <a target="_blank" href={link.href} rel="noreferrer">
-                      {renderLink(link)}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const { className: linkClassName, href: linkHref } = link;
+                  return (
+                    <li key={link.id}>
+                      <a
+                        target="_blank"
+                        href={linkHref}
+                        className={cx(linkClassName)}
+                        rel="noreferrer"
+                      >
+                        {renderLink(link)}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
           </div>

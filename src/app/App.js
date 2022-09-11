@@ -214,7 +214,14 @@ const App = () => {
       >
         <Header
           logoUrl="images/app_logo.png"
-          links={socialLinks}
+          links={[
+            ...socialLinks,
+            {
+              href: 'https://drive.google.com/file/d/1mLV8FrPFsaegpHICJY2A1oXvn7feke50/view?usp=sharing',
+              label: 'Resume',
+              className: 'text-on-primary bg-primary px-4 py-2 rounded-xl',
+            },
+          ]}
           currentTheme={currentTheme}
           themeIcon={
             currentTheme === 'theme1' ? (
