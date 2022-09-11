@@ -1,0 +1,10 @@
+.app-btn {
+  &__contained {
+    &.primary {
+      background-color: var(--app-sys-color-primary);
+      color: var(--app-sys-color-on-primary);
+      padding: 0.7rem 1rem;
+      border-radius: 0.6rem;
+    }
+  }
+}

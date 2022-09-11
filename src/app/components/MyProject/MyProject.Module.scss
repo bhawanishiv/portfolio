@@ -1,0 +1,54 @@
+.app-project {
+  &__container {
+    padding: 3rem 0rem;
+    display: flex;
+    align-items: center;
+  }
+  &__preview {
+    &-container {
+      width: 60%;
+      max-width: 60%;
+      opacity: 0.2;
+      &:hover {
+        opacity: 0.7;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  &__info {
+    width: 40%;
+    padding: 1.5rem;
+  }
+  &__description {
+    padding: 1rem 0;
+  }
+
+  &__category {
+    padding: 0.5rem 0;
+    color: var(--app-sys-color-primary);
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__tags {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    li {
+      color: var(--app-sys-color-on-surface-variant);
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+
+    .link {
+      color: var(--app-sys-color-on-surface-variant);
+      &:hover {
+        color: var(--app-sys-color-primary);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --app-sys-color-primary: var(--app-sys-color-primary-light);
+  --app-sys-color-on-primary: var(--app-sys-color-on-primary-light);
+  --app-sys-color-primary-container: var(
+    --app-sys-color-primary-container-light
+  );
+  --app-sys-color-on-primary-container: var(
+    --app-sys-color-on-primary-container-light
+  );
+  --app-sys-color-secondary: var(--app-sys-color-secondary-light);
+  --app-sys-color-on-secondary: var(--app-sys-color-on-secondary-light);
+  --app-sys-color-secondary-container: var(
+    --app-sys-color-secondary-container-light
+  );
+  --app-sys-color-on-secondary-container: var(
+    --app-sys-color-on-secondary-container-light
+  );
+  --app-sys-color-tertiary: var(--app-sys-color-tertiary-light);
+  --app-sys-color-on-tertiary: var(--app-sys-color-on-tertiary-light);
+  --app-sys-color-tertiary-container: var(
+    --app-sys-color-tertiary-container-light
+  );
+  --app-sys-color-on-tertiary-container: var(
+    --app-sys-color-on-tertiary-container-light
+  );
+  --app-sys-color-error: var(--app-sys-color-error-light);
+  --app-sys-color-error-container: var(--app-sys-color-error-container-light);
+  --app-sys-color-on-error: var(--app-sys-color-on-error-light);
+  --app-sys-color-on-error-container: var(
+    --app-sys-color-on-error-container-light
+  );
+  --app-sys-color-background: var(--app-sys-color-background-light);
+  --app-sys-color-on-background: var(--app-sys-color-on-background-light);
+  --app-sys-color-surface: var(--app-sys-color-surface-light);
+  --app-sys-color-on-surface: var(--app-sys-color-on-surface-light);
+  --app-sys-color-surface-variant: var(--app-sys-color-surface-variant-light);
+  --app-sys-color-on-surface-variant: var(
+    --app-sys-color-on-surface-variant-light
+  );
+  --app-sys-color-outline: var(--app-sys-color-outline-light);
+  --app-sys-color-inverse-on-surface: var(
+    --app-sys-color-inverse-on-surface-light
+  );
+  --app-sys-color-inverse-surface: var(--app-sys-color-inverse-surface-light);
+  --app-sys-color-inverse-primary: var(--app-sys-color-inverse-primary-light);
+  --app-sys-color-shadow: var(--app-sys-color-shadow-light);
+  --app-sys-color-surface-tint: var(--app-sys-color-surface-tint-light);
+  --app-sys-color-surface-tint-color: var(
+    --app-sys-color-surface-tint-color-light
+  );
+}
