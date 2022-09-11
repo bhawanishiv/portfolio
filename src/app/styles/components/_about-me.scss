@@ -1,0 +1,10 @@
+.app-about {
+  &__technologies {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // display: flex;
+      // flex-wrap: wrap;
+    }
+  }
+}
