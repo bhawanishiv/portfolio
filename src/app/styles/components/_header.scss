@@ -1,0 +1,7 @@
+.app-header {
+  &.scroll {
+    @include for-xl-up {
+      top: -9.6rem;
+    }
+  }
+}

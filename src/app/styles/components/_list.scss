@@ -1,4 +1,15 @@
 ul {
   list-style: none;
   padding: 0;
+  li.list__item {
+    position: relative;
+    padding: 0.25rem 1.5rem;
+    padding-left: 1rem;
+    &::before {
+      content: '↬';
+      color: var(--app-sys-color-primary);
+      position: absolute;
+      left: 0px;
+    }
+  }
 }

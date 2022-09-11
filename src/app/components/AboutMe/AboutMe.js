@@ -4,30 +4,28 @@ const AboutMe = (props) => {
   const { user } = props;
 
   const renderAboutMe = () => (
-    <div className="app-about__container">
-      <div className="app-about__info">
-        <h2 className="text-md">About me</h2>
+    <div className="md:flex py-24">
+      <div className="max-w-lg">
+        <h2 className="text-3xl">About me</h2>
 
-        <p className="app-about__description">
-          My name is {user.displayName}, I am from Jharkhand, India.
+        <p className="py-2">
+          My name is {user.displayName} and I am from Jharkhand, India.
         </p>
-        <p className="app-about__description">
+        <p className="py-2">
           I completed my{' '}
           <span className="font-semibold">
-            Electronics and Communication Engieering
+            Electronics and Communication Engineering
           </span>{' '}
           in 2020, and am interested in exploring things that I don&apos;t know.
         </p>
-        <p className="app-about__description">
+        <p className="py-2">
           During my engineering, I found that &quot;Software&quot; is the core
           of a system that makes it more dynamic, which fascinated me a lot and
           I started my professional journey as a{' '}
           <span className="font-semibold">Software Engineer</span>.
         </p>
 
-        <p className="app-about__description">
-          Following are tools/technologies I mostly work with:
-        </p>
+        <p className="">Following are tools/technologies I mostly work with:</p>
         <ul className="app-about__technologies-list">
           {[
             'Javascript',
@@ -51,9 +49,9 @@ const AboutMe = (props) => {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="md:w-1/2 p-4 flex justify-center">
         <img
-          className="app-avatar md"
+          className="rounded-full w-64 h-64"
           src={user.imageUrl}
           alt={user.displayName}
         />

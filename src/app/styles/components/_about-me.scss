@@ -1,43 +1,10 @@
 .app-about {
-  &__container {
-    padding: 2rem 0;
-
-    @include for-xl-up {
-      padding: 5rem 0;
-
-      justify-content: center;
-      display: flex;
-    }
-    gap: 4rem;
-  }
-  &__info {
-    @include for-xl-up {
-      max-width: 32rem;
-    }
-  }
-
-  &__description {
-    padding: 0.5rem 0;
-  }
-
   &__technologies {
     &-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       // display: flex;
       // flex-wrap: wrap;
-
-      li.list__item {
-        position: relative;
-        padding: 0.25rem 1.5rem;
-        padding-left: 1rem;
-        &::before {
-          content: '↬';
-          color: var(--app-sys-color-primary);
-          position: absolute;
-          left: 0px;
-        }
-      }
     }
   }
 }
