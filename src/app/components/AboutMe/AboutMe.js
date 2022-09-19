@@ -1,10 +1,10 @@
 import React from 'react';
 
 const AboutMe = (props) => {
-  const { user } = props;
+  const { user, skills } = props;
 
   const renderAboutMe = () => (
-    <div className="md:flex py-24">
+    <div className="md:flex ">
       <div className="max-w-lg">
         <h2 className="text-3xl">About me</h2>
 
@@ -27,24 +27,9 @@ const AboutMe = (props) => {
 
         <p className="">Following are tools/technologies I mostly work with:</p>
         <ul className="app-about__technologies-list">
-          {[
-            'Javascript',
-            'React',
-            'Angular',
-            'Node.js',
-            'Typescript',
-            'Next.js',
-            'GraphQL',
-            'React Native',
-            'Brightscript',
-            'MongoDB',
-            'SQL',
-            'Java',
-            'C++',
-            'PHP',
-          ].map((item) => (
-            <li className="list__item" key={item}>
-              {item}
+          {skills.map((item) => (
+            <li className="list__item" key={item.key}>
+              {item.label}
             </li>
           ))}
         </ul>
@@ -52,7 +37,7 @@ const AboutMe = (props) => {
       <div className="md:w-1/2 p-4 flex justify-center">
         <img
           className="rounded-full w-64 h-64"
-          src={user.imageUrl}
+          src={user.avatarUrl}
           alt={user.displayName}
         />
       </div>

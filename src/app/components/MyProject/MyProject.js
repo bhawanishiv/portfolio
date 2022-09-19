@@ -27,18 +27,25 @@ const MyProjectImage = (props) => {
 };
 
 const MyProjectContent = (props) => {
-  const { title, category, description, tags, links, previewUrl, className } =
-    props;
+  const {
+    icons,
+    title,
+    category,
+    description,
+    tags,
+    links,
+    previewUrl,
+    className,
+  } = props;
 
   const renderLink = (link) => {
     if (link.icon) {
-      const Icon = link.icon;
+      const Icon = icons[link.icon];
       return <Icon className="app-icon active" />;
     }
 
     return link.label;
   };
-
   const renderContent = () => (
     <div className={cx('md:px-6', className)}>
       <p className="text-primary py-2">{category}</p>
@@ -64,7 +71,7 @@ const MyProjectContent = (props) => {
       <div className="py-6">
         <ul className="flex flex-wrap gap-6">
           {links.map((link) => (
-            <li key={link.id}>
+            <li key={link.href}>
               <a target="_blank" href={link.href} rel="noreferrer">
                 {renderLink(link)}
               </a>
