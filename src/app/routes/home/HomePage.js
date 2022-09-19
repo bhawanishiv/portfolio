@@ -255,7 +255,6 @@ const HomePage = (props) => {
           key: doc.id,
           ...doc.data(),
         };
-        console.log(`newUser->`, newUser);
         setUser(newUser);
       });
     });
