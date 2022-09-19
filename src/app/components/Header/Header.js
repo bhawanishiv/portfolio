@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
 
+import { ReactComponent as AppLogoFull } from 'app/assets/app-logo-full.svg';
+import { ReactComponent as AppLogo } from 'app/assets/app-logo.svg';
+
 const scrollOffset = 140;
 const scrollDelta = 10;
 
-const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
+const Header = ({ icons, links, themeIcon, onThemeChange }) => {
   const [{ scrolling, previousTop, hide }, setScrollState] = useState({
     scrolling: false,
     previousTop: 0,
@@ -51,7 +54,7 @@ const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
 
   const renderLink = (link) => {
     if (link.icon) {
-      const Icon = link.icon;
+      const Icon = icons[link.icon];
       return <Icon className="app-icon active" />;
     }
 
@@ -69,7 +72,8 @@ const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
       <div className="app-container">
         <div className="flex items-center">
           <a href="/">
-            <img src={logoUrl} alt={logoAlt} className="h-12 w-auto" />
+            <AppLogoFull className="h-12 w-auto hidden md:block" />
+            <AppLogo className="h-12 w-auto md:hidden" />
           </a>
           <div className="ml-auto">
             <nav>
@@ -83,14 +87,24 @@ const Header = ({ logoUrl, logoAlt, links, themeIcon, onThemeChange }) => {
                     {themeIcon}
                   </button>
                 </li>
-                {links.map((link) => {
-                  const { className: linkClassName, href: linkHref } = link;
+                {links.map((link, i) => {
+                  if (link.hide) return null;
+                  const {
+                    className: linkClassName,
+                    variant,
+                    href: linkHref,
+                  } = link;
                   return (
-                    <li key={link.id}>
+                    // eslint-disable-next-line react/no-array-index-key
+                    <li key={i}>
                       <a
                         target="_blank"
                         href={linkHref}
-                        className={cx(linkClassName)}
+                        className={cx(
+                          linkClassName,
+                          variant === 'primary' &&
+                            'text-on-primary bg-primary px-4 py-2 rounded-xl'
+                        )}
                         rel="noreferrer"
                       >
                         {renderLink(link)}
