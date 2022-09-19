@@ -66,13 +66,14 @@ const minorProjects = [
 ];
 
 const HomePage = (props) => {
-  const { icons, currentTheme, user, onThemeChange } = props;
+  const { icons, currentTheme, onThemeChange } = props;
 
   const [appLoaded, setAppLoaded] = useState(false);
   const [socialLinks, setSocialLinks] = useState([]);
   const [works, setWorks] = useState([]);
   const [skills, setSkills] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [user, setUser] = useState({});
 
   const { db } = useFireBase();
 
@@ -244,6 +245,25 @@ const HomePage = (props) => {
 
     return renderHomePage();
   };
+
+  useEffect(() => {
+    const q = query(collection(db, 'users'), orderBy('order'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let newUser = {};
+      querySnapshot.forEach((doc) => {
+        newUser = {
+          key: doc.id,
+          ...doc.data(),
+        };
+        console.log(`newUser->`, newUser);
+        setUser(newUser);
+      });
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   useEffect(() => {
     const q = query(collection(db, 'skills'), orderBy('order'));

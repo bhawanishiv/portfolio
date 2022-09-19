@@ -37,7 +37,7 @@ const AboutMe = (props) => {
       <div className="md:w-1/2 p-4 flex justify-center">
         <img
           className="rounded-full w-64 h-64"
-          src={user.imageUrl}
+          src={user.avatarUrl}
           alt={user.displayName}
         />
       </div>

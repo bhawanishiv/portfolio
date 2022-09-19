@@ -18,11 +18,7 @@ const Introduction = (props) => {
         and is eager to know about how things work.
       </p>
 
-      <div className="md:max-w-lg">
-        I&apos;m designated as a Software Engineer who designs and builds
-        extensible, efficient and easy applications. I&apos;ve worked for Web,
-        Mobile, TV and RokuTV.
-      </div>
+      <div className="md:max-w-lg">{user.description}</div>
     </div>
   );
 

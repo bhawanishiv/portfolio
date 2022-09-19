@@ -21,12 +21,6 @@ import HomePage from './routes/home/HomePage';
 import 'app/styles/styles.css';
 import 'app/styles/main.scss';
 
-const user = {
-  displayName: 'Bhawani Shankar Bharti',
-  imageUrl: 'images/avatar_2.jpeg',
-  email: 'bhawanishiv@gmail.com',
-};
-
 const icons = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
@@ -73,7 +67,6 @@ const App = () => {
         currentTheme={currentTheme}
         onThemeChange={handleThemeChange}
         icons={icons}
-        user={user}
       />
     </FireBase>
   );
