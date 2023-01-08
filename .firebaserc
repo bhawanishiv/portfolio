@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "bhawanishiv-portfolio"
-  }
+  },
+  "targets": {
+    "bhawanishiv-portfolio": {
+      "hosting": {
+        "bhawanishiv": [
+          "bhawanishiv"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
